@@ -99,6 +99,11 @@ function playGame() {
     }
     else if(computerScore === 5) {
         score.textContent = `You lose: ${computerScore} - ${humanScore}`;
+        let p = document.createElement("p");
+        let div = document.querySelector(".blank");
+        let container = document.querySelector(".container");
+        p.textContent = "Click the reload button to play again";
+        container.insertBefore(p,div);
     }
     else {
         score.textContent = `You: ${humanScore} Computer: ${computerScore}`;
